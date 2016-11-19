@@ -13,9 +13,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: App,
       children: [
-        { path: '', component: List },
-        { path: '/registration', component: RegistrationForm },
-        { path: '/promise/:id', component: Promis }
+        { path: '', component: List }
       ]
     }
   ]

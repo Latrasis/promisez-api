@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <top></top>
+    <profile-top></profile-top>
+    <nav class="nav-list">
+      <button class="nav-list-btn" type="button" name="button">Мои</button>
+      <button class="nav-list-btn" type="button" name="button">Другие</button>
+    </nav>
     <router-view></router-view>
 </template>
-
 <script>
-import Top from './components/Top.vue'
+import ProfileTop from './components/ProfileTop.vue'
 
 export default {
   name: 'app',
   components: {
-    Top
+    ProfileTop
   },
   data() {
     return {
@@ -31,22 +34,35 @@ export default {
 
 <style>
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   width: inherit;
 }
 
-h1, h2 {
-  font-weight: normal;
+.nav-list {
+  margin-top: 5rem;
+  display: flex;
 }
+
+.nav-list .nav-list-btn {
+  border-radius: 0;
+  background-color: #333;
+  border: none;
+  color: #aaa;
+  width: 50%;
+  height: 3rem;
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-bottom: 4px solid #333;
+}
+
+.nav-list .nav-list-btn:hover,
+.nav-list .nav-list-btn.selected {
+  border-bottom: 4px solid #848;
+  color: #fff;
+}
+
+
 </style>

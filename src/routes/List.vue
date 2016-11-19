@@ -34,7 +34,7 @@ ul {
   list-style-type: none;
   width: 100%;
   padding: 0;
-  margin: 5rem 0 0 0;
+  margin: 0;
 }
 
 li {
