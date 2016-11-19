@@ -1,18 +1,16 @@
 <template>
   <div id="app">
     <top></top>
-    <list><list>
+    <router-view></router-view>
 </template>
 
 <script>
-import Top from './Top.vue'
-import List from './List.vue'
+import Top from './components/Top.vue'
 
 export default {
   name: 'app',
   components: {
-    Top,
-    List
+    Top
   }
 }
 </script>

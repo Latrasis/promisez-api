@@ -1,8 +1,21 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import App from './components/App.vue'
+import VueRouter from 'vue-router'
+import App from './App.vue'
+import List from './routes/List.vue'
 
-Vue.use(Vuex);
+Vue.use(VueRouter)
+Vue.use(Vuex)
+
+const router = new VueRouter({
+  routes: [
+    { path: '/', component: App,
+      children: [
+        { path: '', component: List }
+      ]
+    }
+  ]
+})
 
 const store = new Vuex.Store({
   state: {
@@ -15,6 +28,5 @@ const store = new Vuex.Store({
 })
 
 const app = new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+  router
+}).$mount('#app')

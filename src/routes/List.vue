@@ -1,8 +1,11 @@
 <template lang="html">
   <ul>
     <li v-for="item in list">
-      <h3> Обещание {{ item.title }}</h3>
-      <p>{{ item.description }}</p>
+      <header>
+        <h3> Обещание {{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </header>
+      <input type="checkbox" name="name" class="checked" v-model="item.done">
     </li>
     <form class="item_adder">
       <input type="text" name="name" v-model="new_title" placeholder="Title">
@@ -17,10 +20,14 @@ export default {
   data () {
     return {
       list: [
-        { title: '1', description: 'Clean Bathroom'},
-        { title: '2', description: 'Clean Bathroom'},
-        { title: '3', description: 'Clean Bathroom'},
-        { title: '4', description: 'Clean Bathroom'},
+        {
+          title: '1',
+          description: 'Clean Bathroom',
+          done: false
+        },
+        { title: '2', description: 'Clean Bathroom', done: false},
+        { title: '3', description: 'Clean Bathroom', done: false},
+        { title: '4', description: 'Clean Bathroom', done: false},
       ]
     }
   },
@@ -43,9 +50,15 @@ ul {
 
 li {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: left;
+  justify-content: space-between;
   padding: 1rem;
+}
+
+li header {
+  display: flex;
+  flex-direction: column;
 }
 
 li h3 {
@@ -59,6 +72,7 @@ li:hover {
 li:active {
   background-color: #444;
 }
+
 
 
 a {
