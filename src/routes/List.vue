@@ -14,7 +14,10 @@ export default {
     ProfileItem
   },
   computed: {
-    list() { return this.$store.state.list }
+    list() {
+      if (this.$route.name == 'rec') return this.$store.state.rec_list;
+      if (this.$route.name == 'send') return this.$store.state.send_list;
+    }
   },
   methods: {
     addItem: function() {
