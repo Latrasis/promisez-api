@@ -12,8 +12,8 @@ const router = new VueRouter({
   routes: [
     { path: '/profile', component: Profile,
       children: [
-        { path: 'rec', component: List },
-        { path: 'send', component: List },
+        { path: 'rec', component: List, name: 'rec' },
+        { path: 'send', component: List, name: 'send' },
       ]
     },
     { path: '/create', component: Create }
@@ -22,7 +22,14 @@ const router = new VueRouter({
 
 const store = new Vuex.Store({
   state: {
-    list: [
+    profile: {
+      name: 'Bob'
+    },
+    contacts: [
+      {name: 'Alice'},
+      {name: 'Eve'}
+    ],
+    rec_list: [
       {
         title: '1',
         description: 'Clean Bathroom',
@@ -31,14 +38,21 @@ const store = new Vuex.Store({
       { title: '2', description: 'Clean Bathroom', done: false},
       { title: '3', description: 'Clean Bathroom', done: false},
       { title: '4', description: 'Clean Bathroom', done: false},
-    ]
+    ],
+    send_list: []
   },
   mutations : {
-    addItem: (state, item) => state.list.push(item),
+    addRecItem: (state, item) => state.rec_list.push(item),
+    addSendItem: (state, item) => state.send_list.push(item),
+    addContact: (state, contact) => state.contacts.push(contact)
   },
   actions : {
-    createPromiseItem({ commit }, item) {
-      commit('addItem', item)
+    createPromiseItem({ state, commit }, item) {
+      if (item.receiver == state.profile.name) {
+        commit('addRecItem', item)
+      } else {
+        commit('addSendItem', item)
+      }
     }
   }
 })
