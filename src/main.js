@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import List from './routes/List.vue'
+import RegistrationForm from './routes/RegistrationForm.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -11,7 +12,8 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: App,
       children: [
-        { path: '', component: List }
+        { path: '', component: List },
+        { path: '/registration', component: RegistrationForm }
       ]
     }
   ]
