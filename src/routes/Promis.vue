@@ -21,34 +21,4 @@ export default {
 
 <style lang="css">
 
-ul {
-  list-style-type: none;
-  width: 100%;
-  padding: 0;
-  margin: 5rem 0 0 0;
-}
-
-li {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 1rem;
-}
-
-li h3 {
-  margin: 0;
-}
-
-li:hover {
-  background-color: #888;
-  color: #fff;
-}
-li:active {
-  background-color: #444;
-}
-
-
-a {
-  color: #42b983;
-}
 </style>
