@@ -9,7 +9,7 @@
       <input type="text" name="name" v-model="desc" placeholder="Description">
       <input type="text" name="name" v-model="assigne" placeholder="Assigne">
       <input type="time" name="name" v-model="expire" placeholder="Expiration">
-      <input v-on:click="addItem" type="button" value="Create">
+      <input type="button" value="Edit">
     </form>
   </ul>
 </template>
