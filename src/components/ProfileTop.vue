@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="profile-top">
     <img src=""/>
-    <h4>Мои Обещания</h4>
+    <h4>Обещания</h4>
   </div>
 </template>
 

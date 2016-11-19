@@ -14,20 +14,6 @@ export default {
   name: 'app',
   components: {
     ProfileTop
-  },
-  data() {
-    return {
-      list: [
-        {
-          title: '1',
-          description: 'Clean Bathroom',
-          done: false
-        },
-        { title: '2', description: 'Clean Bathroom', done: false},
-        { title: '3', description: 'Clean Bathroom', done: false},
-        { title: '4', description: 'Clean Bathroom', done: false},
-      ]
-    }
   }
 }
 </script>
@@ -51,11 +37,12 @@ export default {
   border: none;
   color: #aaa;
   width: 50%;
-  height: 3rem;
+  height: 2rem;
   margin: 0;
   padding: 0.5rem;
   font-size: 0.9rem;
   border-bottom: 4px solid #333;
+  text-decoration: none;
 }
 
 .nav-list .nav-list-btn:hover,
