@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Profile from './routes/Profile.vue'
 import List from './routes/List.vue'
 import Create from './routes/Create.vue'
+import Item from './routes/Item.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -16,6 +17,7 @@ const router = new VueRouter({
         { path: 'send', component: List, name: 'send' },
       ]
     },
+    { path: '/item/:id', component: Item },
     { path: '/create', component: Create }
   ]
 })

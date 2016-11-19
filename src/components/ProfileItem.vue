@@ -1,16 +1,16 @@
 <template lang="html">
-  <li class="profile-item">
-    <span class="time-limit"></span>
+  <router-link :to="{ path: '/item/'+id }" class="profile-item" tag="li">
+    <span class="time-limit">{{number}}</span>
     <header>
       <h3> {{ item.title }}</h3>
       <p>{{ item.description }}</p>
     </header>
-  </li>
+  </router-link>
 </template>
 
 <script>
 export default {
-  props: ['item']
+  props: ['item', 'id']
 }
 </script>
 

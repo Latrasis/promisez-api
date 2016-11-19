@@ -1,6 +1,6 @@
 <template lang="html">
   <ul>
-    <profile-item v-for="item in list" v-bind:item="item"></profile-item>
+    <profile-item v-for="(item, index) in list" v-bind:item="item" v-bind:id="index"></profile-item>
     <router-link to="/create" class="buttonAdd" value="+" tag="button">+</router-link>
   </ul>
 </template>
