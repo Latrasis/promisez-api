@@ -17,23 +17,12 @@
 
 <script>
 export default {
-  data () {
-    return {
-      list: [
-        {
-          title: '1',
-          description: 'Clean Bathroom',
-          done: false
-        },
-        { title: '2', description: 'Clean Bathroom', done: false},
-        { title: '3', description: 'Clean Bathroom', done: false},
-        { title: '4', description: 'Clean Bathroom', done: false},
-      ]
-    }
+  computed: {
+    list() { return this.$store.state.list }
   },
   methods: {
     addItem: function() {
-      this.list.push({title: this.new_title, description: this.new_desc})
+      this.$store.dispatch('createPromiseItem', {title: this.new_title, description: this.new_desc})
     }
   }
 }

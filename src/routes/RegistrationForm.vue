@@ -10,13 +10,15 @@
 </template>
 
 <script>
-	methods: {
-    addUser: function() {
-      // TODO
-    }
-  }
+	export default {
+		methods: {
+			addUser: function() {
+				// TODO
+			}
+		}
+	}
 </script>
 
 <style lang="css">
-	
+
 </style>

@@ -11,6 +11,20 @@ export default {
   name: 'app',
   components: {
     Top
+  },
+  data() {
+    return {
+      list: [
+        {
+          title: '1',
+          description: 'Clean Bathroom',
+          done: false
+        },
+        { title: '2', description: 'Clean Bathroom', done: false},
+        { title: '3', description: 'Clean Bathroom', done: false},
+        { title: '4', description: 'Clean Bathroom', done: false},
+      ]
+    }
   }
 }
 </script>

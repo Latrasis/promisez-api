@@ -23,14 +23,28 @@ const router = new VueRouter({
 
 const store = new Vuex.Store({
   state: {
-    promises: new Set()
+    list: [
+      {
+        title: '1',
+        description: 'Clean Bathroom',
+        done: false
+      },
+      { title: '2', description: 'Clean Bathroom', done: false},
+      { title: '3', description: 'Clean Bathroom', done: false},
+      { title: '4', description: 'Clean Bathroom', done: false},
+    ]
   },
   mutations : {
-    createPromise: (state, promise) => state.promises.add(promise),
-    deletePromise: (state, promise) => state.promises.delete(promise)
+    addItem: (state, item) => state.list.push(item),
+  },
+  actions : {
+    createPromiseItem({ commit }, item) {
+      commit('addItem', item)
+    }
   }
 })
 
 const app = new Vue({
-  router
+  router,
+  store
 }).$mount('#app')
