@@ -2,8 +2,8 @@
   <div id="app">
     <profile-top></profile-top>
     <nav class="nav-list">
-      <button class="nav-list-btn" type="button" name="button">Мои</button>
-      <button class="nav-list-btn" type="button" name="button">Другие</button>
+      <router-link to="rec" class="nav-list-btn" active-class="selected">Мои</router-link>
+      <router-link to="send" class="nav-list-btn" active-class="selected">Другие</router-link>
     </nav>
     <router-view></router-view>
 </template>

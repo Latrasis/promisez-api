@@ -13,7 +13,8 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: App,
       children: [
-        { path: '', component: List }
+        { path: '/rec', component: List },
+        { path: '/send', component: List }
       ]
     }
   ]
