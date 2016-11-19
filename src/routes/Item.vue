@@ -1,5 +1,5 @@
 <template lang="html">
-  <h3>{{ id }} {{ item.description }}</h3>
+  <h3>{{ item.description }}</h3>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     item() {
-      return this.$store.state.rec_list[this.id]
+      return this.$store.state.promiseList[this.id]
     }
   }
 }

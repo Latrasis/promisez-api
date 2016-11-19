@@ -31,30 +31,15 @@ const store = new Vuex.Store({
       {name: 'Alice'},
       {name: 'Eve'}
     ],
-    rec_list: [
-      {
-        title: '1',
-        description: 'Clean Bathroom',
-        done: false
-      },
-      { title: '2', description: 'Clean Bathroom', done: false},
-      { title: '3', description: 'Clean Bathroom', done: false},
-      { title: '4', description: 'Clean Bathroom', done: false},
-    ],
-    send_list: []
+    promiselist: {}
   },
   mutations : {
-    addRecItem: (state, item) => state.rec_list.push(item),
-    addSendItem: (state, item) => state.send_list.push(item),
-    addContact: (state, contact) => state.contacts.push(contact)
+    addPromise: (state, {id, promise}) => state.promiseList[id] = promise,
+    addContact: (state, {id, contact}) => state.contacts[id] = contact
   },
   actions : {
-    createPromiseItem({ state, commit }, item) {
-      if (item.receiver == state.profile.name) {
-        commit('addRecItem', item)
-      } else {
-        commit('addSendItem', item)
-      }
+    createPromise({ state, commit }, promise) {
+      commit('addPromise', promise.description+promise.assignee, promise)
     }
   }
 })
