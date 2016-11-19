@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import List from './routes/List.vue'
 import RegistrationForm from './routes/RegistrationForm.vue'
+import Promis from './routes/Promis.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
@@ -13,7 +14,8 @@ const router = new VueRouter({
     { path: '/', component: App,
       children: [
         { path: '', component: List },
-        { path: '/registration', component: RegistrationForm }
+        { path: '/registration', component: RegistrationForm },
+        { path: '/promise/:id', component: Promis }
       ]
     }
   ]
