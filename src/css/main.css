@@ -24,7 +24,7 @@ h1, h2 {
 * { box-sizing:border-box; }
 
 /* basic stylings ------------------------------------------ */
-body         { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); }
+
 .container    { 
   font-family:'Roboto';
   width:600px; 
@@ -60,7 +60,7 @@ input         {
 }
 input:focus     { outline:none; }
 
-/* LABEL ======================================= */
+/* LABEL ======================================= */   
 label          {
   color:#999; 
   font-size:18px;
