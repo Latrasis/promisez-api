@@ -1,22 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
-import App from './App.vue'
+import Profile from './routes/Profile.vue'
 import List from './routes/List.vue'
-import RegistrationForm from './routes/RegistrationForm.vue'
-import Promis from './routes/Promis.vue'
+import Create from './routes/Create.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
 const router = new VueRouter({
   routes: [
-    { path: '/', component: App,
+    { path: '/profile', component: Profile,
       children: [
-        { path: '/rec', component: List },
-        { path: '/send', component: List }
+        { path: 'rec', component: List },
+        { path: 'send', component: List },
       ]
-    }
+    },
+    { path: '/create', component: Create }
   ]
 })
 

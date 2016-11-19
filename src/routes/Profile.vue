@@ -2,13 +2,13 @@
   <div id="app">
     <profile-top></profile-top>
     <nav class="nav-list">
-      <router-link to="rec" class="nav-list-btn" active-class="selected">Мои</router-link>
-      <router-link to="send" class="nav-list-btn" active-class="selected">Другие</router-link>
+      <router-link to="/profile/rec" class="nav-list-btn" active-class="selected">Мои</router-link>
+      <router-link to="/profile/send" class="nav-list-btn" active-class="selected">Другие</router-link>
     </nav>
     <router-view></router-view>
 </template>
 <script>
-import ProfileTop from './components/ProfileTop.vue'
+import ProfileTop from '../components/ProfileTop.vue'
 
 export default {
   name: 'app',
@@ -19,12 +19,6 @@ export default {
 </script>
 
 <style>
-
-#app {
-  text-align: center;
-  color: #2c3e50;
-  width: inherit;
-}
 
 .nav-list {
   margin-top: 5rem;
