@@ -6,31 +6,31 @@
   </div>
 
   <form class="item_adder container">
-    <div class="group">
+    <!--<div class="group">-->
     	<input type="text" name="name" v-model="new_title" placeholder="Title" required>
-    	<span class="highlight"></span>
-      	<span class="bar"></span>
-      	<label class="label-none">Title</label>
-    </div>
-    <div class="group">
+    	 <!--span class="highlight"></span>
+      	span class="bar"></span>
+      	label class="label-none">Title</label>
+   </div>-->
+    <!--<div class="group">-->
     	<input type="text" name="name" v-model="new_desc" placeholder="Description" required>
-    	<span class="highlight"></span>
+    	<!--<span class="highlight"></span>
     	<span class="bar"></span>
     	<label class="label-none">Description</label>
     </div>
-    <div class="group">
+    <div class="group">-->
     	<input type="text" name="name" v-model="new_assigne" placeholder="Assigne" required>
-    	<span class="highlight"></span>
+    	<!--<span class="highlight"></span>
       	<span class="bar"></span>
       	<label class="label-none">Assigne</label>
     </div>
-    <div class="group">
-    	<input type="time" name="name" v-model="new_expire" placeholder="Expiration" required>
-    	<span class="highlight"></span>
+    <div class="group">-->
+    	<input type="time" name="name" v-model="new_expire" placeholder="Expiration (time in seconds)" required>
+    	<!--<span class="highlight"></span>
       	<span class="bar"></span>
       	<label class="label-none">Expiration</label>
-    </div>
-    <router-link v-on:click="addItem" to="/profile" tag="input" type="button" value="Save" class="saveButton"><span>Save</span></router-link>
+    </div>-->
+    <router-link v-on:click="addItem" to="/profile/rec" tag="input" type="button" value="Save" class="saveButton"><span>Save</span></router-link>
   </form>
   </div>
 </template>

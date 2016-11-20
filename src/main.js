@@ -31,7 +31,20 @@ const store = new Vuex.Store({
       {name: 'Alice'},
       {name: 'Eve'}
     ],
-    promiselist: {}
+    promiseList: [
+      {
+        title : "Отжимания",
+        description: "Буду отжиматься каждый день 10 раз",
+        assignee : "Self",
+        expires : 86000
+      },
+      {
+        title : "Часики",
+        description: "Обещаю сделать таймер для проекта",
+        assignee : "Кондр",
+        expires : 10001
+      }
+    ]
   },
   mutations : {
     addPromise: (state, {id, promise}) => state.promiseList[id] = promise,

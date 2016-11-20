@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     item() {
-      return this.$store.state.promiseList[this.id]
+      return this.$store.state.promiseItem[this.id]
     }
   }
 }
