@@ -1,6 +1,6 @@
 <template lang="html">
   <ul>
-    <profile-item v-for="(item, index) in list" v-bind:item="item"></profile-item>
+    <profile-item v-for="item in list" v-bind:item="item"></profile-item>
     <router-link to="/create" class="buttonAdd" value="+" tag="button">+</router-link>
   </ul>
 </template>
@@ -14,15 +14,15 @@ export default {
     ProfileItem
   },
   computed: {
-    list() {
-      if (this.$route.name == 'rec') return this.my_promises();
-      if (this.$route.name == 'send') return this.others_promises();
-    },
     my_promises() {
       return this.$store.state.promiseList.filter(({assignee}) => assignee == 'Self')
     },
     others_promises() {
       return this.$store.state.promiseList.filter(({assignee}) => assignee != 'Self')
+    },
+    list() {
+      if (this.$route.name == 'rec') return this.my_promises;
+      if (this.$route.name == 'send') return this.others_promises;
     }
   }
 }
